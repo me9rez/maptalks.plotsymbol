@@ -22,10 +22,11 @@
   },
   "devDependencies": {
     "@rslib/core": "^0.0.18",
+    "es-toolkit": "^1.27.0",
+    "maptalks": "<2.0.0",
     "gulp": "^4.0.0",
-    "maptalks": "<2.0.0"
+    "@mapbox/point-geometry": "^1.1.0"
   },
   "dependencies": {
-    "@mapbox/point-geometry": "^1.1.0"
   }
 }
