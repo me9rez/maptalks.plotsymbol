@@ -10,6 +10,9 @@ export default defineConfig(() => {
                 js: "maptalks.plotsymbol.js",
             },
             legalComments: "none",
+            externals: {
+                'maptalks':"var maptalks"
+            },
         },
         tools: {
             rspack: {
