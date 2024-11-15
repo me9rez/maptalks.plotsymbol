@@ -2,37 +2,39 @@
   "name": "maptalks.plotsymbol",
   "version": "0.8.0",
   "description": "A maptalks plugin to support plot symbols, e.g. DoubleArrow, ClosedCurve, DiagonalArrow, StraightArrow, etc.",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/maptalks/maptalks.plotsymbol.git"
   },
-  "main": "dist/maptalks.plotsymbol.js",
-  "module": "dist/maptalks.plotsymbol.es.js",
-  "jsnext:main": "dist/maptalks.plotsymbol.es.js",
+  "license": "MIT",
   "exports": {
     ".": {
       "import": "./dist/maptalks.plotsymbol.es.js",
-      "require":"./dist/maptalks.plotsymbol.js"
+      "require": "./dist/maptalks.plotsymbol.js"
     }
   },
+  "main": "dist/maptalks.plotsymbol.js",
+  "module": "dist/maptalks.plotsymbol.es.js",
+  "jsnext:main": "dist/maptalks.plotsymbol.es.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "preversion": "npm test",
-    "version": "gulp minify && git add -A dist",
-    "lint": "eslint index.js test/**/*.js",
-    "test": "gulp test",
-    "pretest": "npm run lint",
-    "prepublish": "npm run lint && gulp minify",
     "build": "rslib build",
-    "dev": "gulp watch"
+    "dev": "gulp watch",
+    "lint": "eslint index.js test/**/*.js",
+    "prepublish": "npm run lint && gulp minify",
+    "pretest": "npm run lint",
+    "test": "gulp test",
+    "preversion": "npm test",
+    "version": "gulp minify && git add -A dist"
   },
+  "dependencies": {},
   "devDependencies": {
+    "@mapbox/point-geometry": "^1.1.0",
     "@rslib/core": "^0.0.18",
     "es-toolkit": "^1.27.0",
-    "maptalks": "<2.0.0",
     "gulp": "^4.0.0",
-    "@mapbox/point-geometry": "^1.1.0"
-  },
-  "dependencies": {
+    "maptalks": "<2.0.0"
   }
 }
