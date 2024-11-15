@@ -42,6 +42,7 @@ export default defineConfig(() => {
                         js: "maptalks.plotsymbol.es.js",
                     },
                     legalComments: "none",
+                    externals: ["maptalks", "@mapbox/point-geometry"],
                 },
             },
             umdLib,
